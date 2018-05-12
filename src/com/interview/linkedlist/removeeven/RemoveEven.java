@@ -4,9 +4,13 @@ import com.interview.linkedlist.Node;
 
 public class RemoveEven {
 
-	public static void removeEven(Node head) {
-		Node node = head;
+	public static Node removeEven(Node head) {
 		
+		while (head.value % 2 == 0) {
+			head = head.next;
+		}
+		
+		Node node = head;
 		while (node.next != null) {
 			Node node2 = node.next;
 			if (node2.value % 2 == 0) {
@@ -16,5 +20,6 @@ public class RemoveEven {
 				node = node2;
 			}
 		}
+		return head;
 	}
 }
