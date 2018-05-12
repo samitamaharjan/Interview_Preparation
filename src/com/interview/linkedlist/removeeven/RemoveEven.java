@@ -1,0 +1,20 @@
+package com.interview.linkedlist.removeeven;
+
+import com.interview.linkedlist.Node;
+
+public class RemoveEven {
+
+	public static void removeEven(Node head) {
+		Node node = head;
+		
+		while (node.next != null) {
+			Node node2 = node.next;
+			if (node2.value % 2 == 0) {
+				node.next = node2.next;
+				node2.next = null;
+			} else {
+				node = node2;
+			}
+		}
+	}
+}
