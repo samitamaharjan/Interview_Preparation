@@ -54,6 +54,14 @@ public class MyLinkedList implements IMyLinkedList {
 		if (head == null) return -1; //TODO throw exception
 		Node node = head;
 		
+		if (count == 1) {
+			int n = node.value;
+			head = null;
+			tail = null;
+			count--;
+			return n;
+		}
+		
 		while (node.next.next != null) {
 			node = node.next;
 		}

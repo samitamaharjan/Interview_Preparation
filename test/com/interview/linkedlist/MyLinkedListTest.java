@@ -101,6 +101,14 @@ public class MyLinkedListTest {
 		int val2 = myLinkedList.removeFromTail(); 
 		assertEquals(5, val2);
 		assertEquals(1, myLinkedList.readFromTail());
+		
+		int val3 = myLinkedList.removeFromTail(); 
+		assertEquals(1, val3);
+		assertEquals(3, myLinkedList.readFromTail());
+		
+		int val4 = myLinkedList.removeFromTail(); 
+		assertEquals(3, val4);
+		assertEquals(-1, myLinkedList.readFromTail());
 	}
 	
 	@Test
