@@ -26,7 +26,8 @@ public class KthToLastElement {
 	
 	// Recursive approach
 	public static int findKthLastElementRecursively(Node node, int k) {
-		
-		return 0;
+		if (node == null) return 0;
+		int num = findKthLastElementRecursively(node.next, k) + 1;
+		return num;
 	}
 }
