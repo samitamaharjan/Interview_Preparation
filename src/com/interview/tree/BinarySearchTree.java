@@ -91,5 +91,8 @@ public class BinarySearchTree {
 		
 		System.out.println("\nPost-order traverse: ");
 		postOrderTraverse(tree.root);
+		
+		System.out.println("\n find the node: ");
+		inOrderTraverse(tree.findNode(root, 18));
 	}
 }
