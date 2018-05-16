@@ -5,7 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.interview.linkedlist.Node;
-import com.interview.linkedlist.removeeven.RemoveEven;
 
 public class PartitionLinkedListTest {
 	
@@ -31,11 +30,11 @@ Node head;
 	
 	@Test
 	public void test1() {
-		head = PartitionLinkedList.partitionLinkedlist(head, 25);
+		head = PartitionLinkedList.partitionLinkedListMethodII(head, 25);
 		Assert.assertEquals(20, head.value);
 		Assert.assertEquals(10, head.next.value);
-		Assert.assertEquals(25, head.next.next.value);
-		Assert.assertEquals(30, head.next.next.next.value);
+		Assert.assertEquals(60, head.next.next.value);
+		Assert.assertEquals(50, head.next.next.next.value);
 		Assert.assertEquals(40, head.next.next.next.next.value);
 	}
 }
