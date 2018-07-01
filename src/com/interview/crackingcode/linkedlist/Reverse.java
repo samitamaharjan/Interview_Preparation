@@ -40,4 +40,15 @@ public class Reverse {
 		System.out.println(node.value);
 		printForward(node.next);
 	}
+	
+	public static int sum(Node node) {
+		if (node == null) return 0;
+		return sum(node.next) + node.value;
+	}
+	
+	public static int product(Node node) {
+		if (node == null) return 1;
+		
+		return product(node.next) * node.value;
+	}
 }

@@ -15,9 +15,9 @@ public class RemoveEven {
 			Node node2 = node.next;
 			if (node2.value % 2 == 0) {
 				node.next = node2.next;
-				node2.next = null;
+				node2 = null;
 			} else {
-				node = node2;
+				node = node.next;
 			}
 		}
 		return head;
